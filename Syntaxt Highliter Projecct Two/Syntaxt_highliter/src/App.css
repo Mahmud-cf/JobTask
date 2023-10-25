@@ -1,0 +1,138 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+*{
+  box-sizing: border-box;
+}
+h2{
+  max-width: 550px;
+  text-align: center;
+}
+mark{
+  background-color: #ffff00a9;
+}
+.read-the-docs {
+  color: #888;
+}
+.highlighted-container{
+  position: relative;
+  display: inline-block;
+  width:100%;
+}
+
+
+.highlighted-container::before,
+.highlighted-container::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.highlighted-container {
+  transition: color 1s;
+}
+
+.highlighted-container::before,
+.highlighted-container::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.highlighted-container::before {
+  top: 0;
+  left: 0;
+}
+
+.highlighted-container::after {
+  bottom: 0;
+  right: 0;
+}
+
+.highlighted-container:hover::before,
+.highlighted-container:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.highlighted-container:hover::before {
+  border-top-color: red;
+  border-right-color: red;
+  transition: width 1s ease-out, height 1s ease-out 1s;
+}
+
+.highlighted-container:hover::after {
+  border-bottom-color: red;
+  border-left-color: red;
+  transition: border-color 0s ease-out 2s, width 1s ease-out 2s, height 1s ease-out 3s;
+}
+
+
+/* 
+:root {
+  --background: #fefefe;
+  --text: #4b507a;
+  --cyan: #60daaa;
+  --yellow: #fbca67;
+  --orange: #ff8a30;
+  --red: #f45e61;
+  --purple: #6477b9;
+  --blue: #0eb7da;
+}
+
+
+.highlighted-container::before {
+  content: '';
+  position: absolute;
+  border: 2px solid transparent;
+  transition: all 2s ease-in-out;
+}
+
+.highlighted-container::before {
+  top: 0;
+  left: 0;
+  border-top-color: var(--cyan);
+  animation: topRightToTop 2s forwards;
+}
+
+@keyframes topRightToTop {
+  0% {
+    width: 0;
+    left:0;
+  }
+  50% {
+    width: 100%;
+    left:100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.highlighted-container {
+  transition: color 0.25s;
+  color: var(--cyan);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.highlighted-container::before {
+  animation: topRightToTop 3s forwards, fadeOut 0.5s 1.5s forwards;
+} */
+
+
+
+

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+body{
+  max-width: 100%;
+  height: 100%;
+  color:#374047;
+}
+.full-page-wrapper{
+  min-height: 100vh;
+  width:100%;
+  background: linear-gradient(180deg,#2a3267,#1e282f 100%);
+}
+.background-animation {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: -1;
+}
+#container{
+  position: absolute;
+}
+
+canvas, .konvajs-content, #container{
+  max-width: 100%!important;
+}
+.content-wrapper{
+  padding:1.5rem;
+}
+.main-container{
+  max-width: 1200px;
+  margin:0 auto;
+}
+.content-wrapper .title{
+  margin-bottom:3rem;
+}
+.content-wrapper .title h2{
+  position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    font-size: 2.22em;
+    margin:0.67em 0;
+}
+
+.card-wrapper{
+  display: flex;
+}
+.card-item-wrapper{
+  width:33.3333%;
+  display: flex;
+    flex: 1 1 auto;
+    padding: 10px;
+}
+.card-content{
+  display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -5px #0000004d;
+    transition: box-shadow .5s;
+    will-change: transform;
+}
+.card-title{
+  font-size: 22px;
+  font-weight: 600;
+  text-shadow: .4px 0.4px 0.6px #374047;
+}
+.card-details{
+  margin-top: 27px;
+    margin-bottom: 27px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+.card-img{
+  text-align: center;
+  margin-top: auto;
+  padding-top: 27px;
+  padding-bottom: 18px;
+}
+.card-img img{
+  max-width:250px;
+}
+.card-button{
+  padding: 10px;
+  position: relative;
+  background: black;
+  width: auto;
+  z-index: 2;
+  display: block;
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #fff;
+}
+.card-button.buttonNo1{
+  background: #00D1FF;
+}
+.card-button.buttonNo2{
+  background: #9E52FF;
+}
+.card-button.buttonNo3{
+  background: #18CB63;
+}
+.card-button::before{
+  content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: #00D1FF;
+    z-index: -1;
+}
+.card-button::after{
+  content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -6px;
+    right: -6px;
+    background: #00D1FF;
+    z-index: -1;
+}
+.card-button.buttonNo1::before, .card-button.buttonNo1::after {
+  background: #00D1FF!important;
+}
+.card-button.buttonNo2::before, .card-button.buttonNo2::after {
+  background: #9E52FF!important;
+}
+.card-button.buttonNo3::before, .card-button.buttonNo3::after {
+  background: #18CB63!important;
+}
+
+
+/*========================= CARD ANIMATION CSS ===================== */
+
+.card-item-wrapper{
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .5s;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  max-width:100%;
+}
+.card-item-wrapper::after{
+  content: '';
+  position: absolute;
+  height: 8px;
+  left: 0;
+  bottom: 0px;
+  box-shadow: 0 30px 20px rgba(0, 0, 0, .3);
+}
+
+
+
+/* ============================Responsive CSS ========================= */
+
+
+@media only Screen and (max-width:1100px) {
+  .card-content{
+    padding:32px;
+  }
+  .card-title{
+    font-size: 20px;
+  }
+  .card-details{
+    font-size: 16px;
+  }
+  .card-button{
+    font-size: 21px;
+  }
+}
+@media only Screen and (max-width:970px) {
+  .card-wrapper{
+    flex-direction: column;
+  }
+  .card-item-wrapper{
+    width:100%;
+  }
+}
+

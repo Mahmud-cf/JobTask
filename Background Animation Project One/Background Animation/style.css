@@ -1,0 +1,272 @@
+@font-face {
+    font-family: primary-font;
+    src: url('./font/SourceSansPro-ExtraLight.otf');
+  }
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+    padding:2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    
+     background-image: linear-gradient(102deg, rgba(255, 165, 150, 0.97) 0%, rgba(0, 117, 255, 0.92) 100%);
+
+     /* display: flex; */
+     /* flex-wrap: wrap;
+    align-content: space-between; */
+}
+
+
+
+/* .square_item {
+    position: absolute;
+    background-color:rgba(209, 199, 199, 0.14);
+    animation: square_item_animate 3s infinite forwards;
+    -webkit-filter: blur(1px);
+    z-index: -1;
+} */
+
+/* @keyframes square_item_animate {
+    0% {
+        
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        transform: translate(0, 0);
+        transform: scale(1.1);
+    }
+    100% {
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+        transform: scale(1);
+    }
+} */
+
+
+#animation-container {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+}
+
+.square_item {
+    background: rgba(255, 255, 255, .2);
+    width: 25px;
+    padding-top: 25px;
+    margin:.1px;
+    float: left;
+    opacity: 0.0;
+    animation: square_item_animate 5s infinite;
+    margin: 3px;
+    -webkit-filter: blur(1px);
+}
+
+@keyframes square_item_animate {
+    0%    {opacity: 0.0;transform: scale(1);}
+    25%   {opacity: 0.35;}
+    50%   {opacity: 0.0;transform: scale(1.23);}
+    100%  {opacity: 0.0;}
+}
+
+
+.card-wrapper{
+    background-color: rgba(37, 47, 54, 0.77);
+    border-radius: 0.375rem;
+    max-width: 100;
+    position: relative;
+    z-index: 4;
+}
+.card-wrapper *{
+    text-align: center;
+}
+.card-wrapper .inner-wrapper{
+    width:25rem;
+    padding:2.975rem 2.28rem ;
+}
+.card-wrapper .inner-wrapper h3{
+    letter-spacing: 0.35rem;
+    width: calc(100% + 0.35rem);
+    font-size: 1.375em;
+    line-height: 1.5;
+    font-family: primary-font;
+    font-weight: 300;
+    padding-bottom:1.7rem;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+.card-wrapper .inner-wrapper h3::after{
+    position: absolute;
+    content: '';
+    width:100%;
+    height: 1px;
+    background-color: rgb(241, 240, 240, .4);
+    left:-2px;
+    bottom:0;
+}
+.card-wrapper .inner-wrapper p{
+    font-family: primary-font;
+    color: rgb(241, 240, 240);
+    letter-spacing: 0.196875rem;
+    width: calc(100% + 0.196875rem);
+    font-size: 0.75em;
+    line-height: 1.875;
+    margin-top:1.7rem;
+    margin-bottom:1.7rem;
+}
+
+
+.card-wrapper .social-media-icon-wrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 1.125em;
+    gap: 1.25rem;
+}
+.card-wrapper .social-media-icon-wrapper div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width:2em;
+    height: 2em;
+}
+.card-wrapper .social-media-icon-wrapper img{
+    width: 60%;
+    height: 60%;
+}
+
+
+
+    /* ============= RESPONSIVE CSS FOR SMALL DEVICE ============ */
+
+@media only screen and (max-width:500px) {
+    .card-wrapper .inner-wrapper{
+        width:24rem;
+        padding:2.775rem 2.16rem ;
+    }
+    .card-wrapper .inner-wrapper h3{
+        padding-bottom:1.3rem;
+    }
+    .card-wrapper .inner-wrapper p{
+        margin-bottom:1.3rem;
+        margin-top:1.3rem;
+    }
+    .card-wrapper .social-media-icon-wrapper div{
+        width:1.8em;
+        height: 1.8em;
+    }
+    .card-wrapper .social-media-icon-wrapper img{
+        width: 60%;
+        height: 60%;
+    }
+}
+@media only screen and (max-width:400px) {
+    .container{
+        padding:.7rem;
+    }
+    .card-wrapper .inner-wrapper{
+        width:100%;
+        padding:2.475rem 1.96rem ;
+    }
+    .card-wrapper .inner-wrapper h3{
+        padding-bottom:1.05rem;
+        font-size: 1em;
+    }
+    .card-wrapper .inner-wrapper p{
+        margin-bottom:1.05rem;
+        margin-top:1.05rem;
+        font-size: .6em;
+    }
+    .card-wrapper .social-media-icon-wrapper div{
+        width:1.4em;
+        height: 1.4em;
+    }
+    .card-wrapper .social-media-icon-wrapper img{
+        width: 60%;
+        height: 60%;
+    }
+}
+@media only screen and (max-width:400px) {
+    .container{
+        padding:.7rem;
+    }
+    .card-wrapper .inner-wrapper{
+        width:100%;
+        padding:2.475rem 1.96rem ;
+    }
+    .card-wrapper .inner-wrapper h3{
+        padding-bottom:1.05rem;
+        font-size: 1em;
+    }
+    .card-wrapper .inner-wrapper p{
+        margin-bottom:1.05rem;
+        margin-top:1.05rem;
+        font-size: .6em;
+    }
+    .card-wrapper .social-media-icon-wrapper div{
+        width:1.4em;
+        height: 1.4em;
+    }
+    .card-wrapper .social-media-icon-wrapper img{
+        width: 60%;
+        height: 60%;
+    }
+}
+@media only screen and (max-width:300px) {
+    .container{
+        padding:.4rem;
+    }
+    .card-wrapper .inner-wrapper{
+        width:100%;
+        padding:2rem 1.2rem ;
+    }
+    .card-wrapper .inner-wrapper h3{
+        padding-bottom:.9rem;
+        font-size: .85em;
+    }
+    .card-wrapper .inner-wrapper p{
+        margin-bottom:.9rem;
+        margin-top:.9rem;
+        font-size: .45em;
+    }
+    .card-wrapper .social-media-icon-wrapper div{
+        width:1em;
+        height: 1em;
+    }
+    .card-wrapper .social-media-icon-wrapper img{
+        width: 60%;
+        height: 60%;
+    }
+}
+
+
+
+
